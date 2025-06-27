@@ -1,0 +1,21 @@
+# Dependências
+node_modules/
+
+# Ambiente
+.env
+
+# Prisma
+prisma/dev.db
+prisma/dev.db-journal
+
+# IDEs e sistema
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs e cache
+npm-debug.log*
+yarn-debug.log*
+.yarn/cache/
+
+/index.html

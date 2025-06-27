@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Artigos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    input, button {
+      padding: 10px;
+      margin-top: 10px;
+    }
+    img {
+      margin-top: 20px;
+      max-width: 100%;
+      height: auto;
+    }
+    p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Buscar Artigo</h1>
+  
+  <input type="number" id="artigoId" placeholder="Digite o ID do artigo" />
+  <button onclick="buscarArtigo()">Buscar</button>
+
+  <div id="resultado" style="margin-top:20px;"></div>
+
+  <script>
+    async function buscarArtigo() {
+      const id = document.getElementById('artigoId').value;
+      const resultado = document.getElementById('resultado');
+
+      try {
+        const response = await fetch(`http://localhost:3333/artigos/${id}`);
+        if (!response.ok) throw new Error("Artigo não encontrado");
+
+        const artigo = await response.json();
+        
+        // Corrige as quebras de linha e renderiza cada parágrafo
+        const paragrafos = artigo.conteudo
+          .replace(/\\n\\n/g, '\n\n') // caso estejam escapadas do banco
+          .split(/\n{2,}/)            // divide em parágrafos
+
+        resultado.innerHTML = `
+          <h2>${artigo.titulo}</h2>
+          ${paragrafos.map(p => `<p>${p.trim()}</p>`).join('')}
+          ${artigo.imagemUrl ? `<img src="${artigo.imagemUrl}" alt="Imagem do artigo">` : ''}
+        `;
+      } catch (err) {
+        resultado.innerHTML = `<p style="color:red;">${err.message}</p>`;
+      }
+    }
+  </script>
+</body>
+</html>
