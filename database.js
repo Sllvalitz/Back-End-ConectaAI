@@ -1,9 +1,8 @@
+const { Pool } = require('pg');
+require('dotenv').config();
 
-const { Pool } = require("pg");
-
-// Replace with your Supabase PostgreSQL connection string
-// Example: postgresql://postgres:[YOUR_PASSWORD]@project-id.supabase.co:5432/postgres
-const connectionString = process.env.DATABASE_URL || "postgresql://postgres.jzmwdoljbzzazpzbqgcy:8723@aws-0-sa-east-1.pooler.supabase.com:6543/postgres";
+// Usando a URL do Supabase do .env
+const connectionString = process.env.DATABASE_URL;
 
 const pool = new Pool({
   connectionString: connectionString,
