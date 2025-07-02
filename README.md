@@ -54,23 +54,58 @@ JWT_SECRET=sua_chave_secreta_aqui
 
 ## APIs Disponíveis
 
-- Autenticação:
-  - POST /auth/login
-  - POST /auth/register
+### Autenticação
+- POST /auth/login
+- POST /auth/register
 
-- Usuários:
-  - GET /users
-  - GET /users/:id
-  - POST /users
-  - PUT /users/:id
-  - DELETE /users/:id
+### Usuários
+- GET /users
+- GET /users/:id
+- POST /users
+- PUT /users/:id
+- DELETE /users/:id
 
-- Quizzes:
-  - GET /quizzes
-  - GET /quizzes/:id
-  - POST /quizzes
-  - PUT /quizzes/:id
-  - DELETE /quizzes/:id
+### Quizzes
+- GET /quizzes
+- GET /quizzes/:id
+- POST /quizzes
+- PUT /quizzes/:id
+- DELETE /quizzes/:id
+
+### Perguntas
+- GET /questions
+- GET /questions/:id
+- POST /questions
+- PUT /questions/:id
+- DELETE /questions/:id
+
+### Opções
+- GET /options
+- GET /options/:id
+- POST /options
+- PUT /options/:id
+- DELETE /options/:id
+
+### Respostas do Usuário
+- GET /user-answers
+- GET /user-answers/:id
+- POST /user-answers
+- PUT /user-answers/:id
+- DELETE /user-answers/:id
+
+### Badges
+- GET /badges
+- GET /badges/:id
+- POST /badges
+- PUT /badges/:id
+- DELETE /badges/:id
+
+### Artigos
+- GET /articles
+- GET /articles/:id
+- POST /articles
+- PUT /articles/:id
+- DELETE /articles/:id
 
 ## Executando o Projeto
 
