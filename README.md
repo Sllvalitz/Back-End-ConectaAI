@@ -1,4 +1,4 @@
-# Sistema Educacional Gameficado
+# Sistema Educacional Gameficado - TRILHAS INOVA
 
 Sistema responsável por permitir o desenvolvimento de conhecimento dos seus usuários de forma gameficada, sendo capaz de receber requisições de cadastro, listagem, atualização e deleção, além de realizar o controle do xp, nível e insígnias do jogador, tornando o aprendizado gamificado com a presença de puzzles em meio a leitura de artigos de interesse do usuário.
 
