@@ -96,7 +96,6 @@ GET /artigos/slug/introducao-a-ia-generativa
 - Prisma
 - PostgreSQL
 - Slugify
-- Dotenv
 
 ---
 
